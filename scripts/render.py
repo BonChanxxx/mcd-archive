@@ -8,6 +8,7 @@ import json
 import os
 import sys
 from datetime import datetime
+from html import escape as esc
 
 
 ARCHES_SVG = '''<svg class="arches" viewBox="0 0 136 110" width="104" aria-hidden="true">
@@ -167,7 +168,7 @@ def render(profile, nickname='麦友', anonymize=False):
     tag_html = ''.join(f'<span class="tag">{x}</span>' for x in tags)
     persona_copy = (f"数据说：你偏爱在上午出没，习惯用组合拳点单；"
                     f"收藏从不落下一期，钱包则被券管得服服帖帖。"
-                    f"主门店是「{store_display}」（{hb['fav_store_count']} 单）。")
+                    f"主门店是「{esc(store_display)}」（{hb['fav_store_count']} 单）。")
 
     ach_html = ''.join(
         f'<div class="ach {a["level"]}"><div class="medal">{ACH_ICONS.get(a["id"], "🏅")}</div>'
@@ -184,7 +185,7 @@ def render(profile, nickname='麦友', anonymize=False):
 
     if co['tickets']:
         ticket_html = ''.join(
-            f'<span class="ticket"><i></i>{x["name"]}<small>{x["time"]}</small></span>'
+            f'<span class="ticket"><i></i>{esc(x["name"])}<small>{x["time"]}</small></span>'
             for x in co['tickets'])
         tickets_inner = (f'<p class="tickets-meta">共 <b>{co["tickets_count"]}</b> 张 · {co["span"]} · 一期不落</p>'
                          f'<div class="tickets">{ticket_html}</div>')
@@ -195,7 +196,7 @@ def render(profile, nickname='麦友', anonymize=False):
     if aset and (aset['points']['accumulated'] or aset['coupons_count'] or aset['affordable_draws']):
         p = aset['points']
         pct = min(100, round(p['available'] / aset['next_milestone']['points'] * 100, 1)) if aset.get('next_milestone') else 0
-        redeem_html = ''.join(f'<span>{r["name"]} · {fmt(r["points"])} 分</span>' for r in aset.get('redeemable_now', []))
+        redeem_html = ''.join(f'<span>{esc(r["name"])} · {fmt(r["points"])} 分</span>' for r in aset.get('redeemable_now', []))
         redeem_section = ''
         if redeem_html:
             redeem_section = f'''
@@ -208,7 +209,7 @@ def render(profile, nickname='麦友', anonymize=False):
             milestone_html = f"""
       <div class="asset-card milestone">
         <h3>下一个里程碑</h3>
-        <div class="asset-big">{aset['next_milestone']['name']} <small>需 {fmt(aset['next_milestone']['points'])} 分</small></div>
+        <div class="asset-big">{esc(aset['next_milestone']['name'])} <small>需 {fmt(aset['next_milestone']['points'])} 分</small></div>
         <div class="bar"><i style="width:{pct}%"></i></div>
         <div class="asset-sub">当前 {fmt(p['available'])} 分（{pct}%）· 还差 <b>{fmt(aset['milestone_gap'])}</b> 分</div>
       </div>"""
@@ -242,7 +243,7 @@ def render(profile, nickname='麦友', anonymize=False):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>麦麦档案 · {nickname}</title>
+<title>麦麦档案 · {esc(nickname)}</title>
 <style>{CSS}</style>
 </head>
 <body>
@@ -253,7 +254,7 @@ def render(profile, nickname='麦友', anonymize=False):
       <div>
         <div class="cover-tag">McD ARCHIVE · 麦当劳个人档案</div>
         <h1>麦麦档案</h1>
-        <p class="cover-sub">{nickname} 的麦当劳数据报告</p>
+        <p class="cover-sub">{esc(nickname)} 的麦当劳数据报告</p>
       </div>
       {ARCHES_SVG}
     </div>
@@ -368,7 +369,7 @@ def render_card(profile, nickname='麦友'):
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>麦麦档案分享卡 · {nickname}</title>
+<title>麦麦档案分享卡 · {esc(nickname)}</title>
 <style>{CARD_CSS}</style>
 </head>
 <body>
@@ -379,7 +380,7 @@ def render_card(profile, nickname='麦友'):
       <div>
         <div class="cover-tag">McD ARCHIVE · 麦当劳个人档案</div>
         <h1>麦麦档案</h1>
-        <p class="cover-sub">{nickname} 的麦当劳数据报告</p>
+        <p class="cover-sub">{esc(nickname)} 的麦当劳数据报告</p>
       </div>
       {ARCHES_SVG}
     </div>
