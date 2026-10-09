@@ -1,0 +1,16 @@
+# 本地数据与产物（永不提交）
+data/
+output/
+*.local.*
+
+# 密钥与凭证
+.env
+.env.*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store

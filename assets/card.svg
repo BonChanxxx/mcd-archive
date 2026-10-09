@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 700" width="840" height="700">
+<title>麦麦档案 · 麦友 的麦当劳数据报告</title>
+<defs>
+  <pattern id="stripes" width="56" height="10" patternUnits="userSpaceOnUse">
+    <rect width="28" height="10" fill="#DA291C"/>
+    <rect x="28" width="28" height="10" fill="#FFC72C"/>
+  </pattern>
+</defs>
+<rect x="0" y="0" width="840" height="700" rx="20" fill="#FBF5EA"/>
+<rect x="26" y="26" width="788" height="10" rx="5" fill="url(#stripes)"/>
+<rect x="26" y="52" width="788" height="330" rx="24" fill="#DA291C"/>
+<text x="62" y="102" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="13" font-weight="700" letter-spacing="4" fill="#FFC72C">McD ARCHIVE · 麦当劳个人档案</text>
+<text x="60" y="172" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="58" font-weight="800" letter-spacing="8" fill="#FFC72C">麦麦档案</text>
+<text x="62" y="208" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="17" fill="#FFFFFF" opacity="0.95">麦友 的麦当劳数据报告</text>
+<g transform="translate(658, 78) scale(1.05)"><path d="M12 104 Q12 16 40 16 Q68 16 68 104 M68 104 Q68 16 96 16 Q124 16 124 104" fill="none" stroke="#FFC72C" stroke-width="16" stroke-linecap="round"/></g>
+<rect x="62" y="248" width="620" height="54" rx="14" fill="#27251F"/>
+<text x="84" y="281" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="17" font-weight="600" fill="#FFC72C">9 个多月 · <tspan fill="#FFFFFF" font-weight="800">20 张门票一期不落</tspan> · <tspan fill="#FFFFFF">10 顿饭拿下 14 枚徽章</tspan></text>
+<text x="62" y="344" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12.5" fill="#FFFFFF" opacity="0.72">档案生成于 2026-10-09 · 数据来自麦当劳官方 MCP</text>
+  <rect x="26" y="398" width="252" height="110" rx="18" fill="#FFFFFF" stroke="#F2E3C0" stroke-width="2"/>
+  <text x="152" y="452" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="42" font-weight="800" fill="#DA291C">20</text>
+  <text x="152" y="486" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#6E6A60">张门票 · 一期不落</text>
+  <rect x="294" y="398" width="252" height="110" rx="18" fill="#FFFFFF" stroke="#F2E3C0" stroke-width="2"/>
+  <text x="420" y="452" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="42" font-weight="800" fill="#DA291C">14</text>
+  <text x="420" y="486" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#6E6A60">枚徽章 · 隐藏成就</text>
+  <rect x="562" y="398" width="252" height="110" rx="18" fill="#FFFFFF" stroke="#F2E3C0" stroke-width="2"/>
+  <text x="688" y="452" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="42" font-weight="800" fill="#DA291C">16,267.3</text>
+  <text x="688" y="486" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="14" fill="#6E6A60">积分 · 历史累计</text>
+  <rect x="26" y="524" width="186" height="118" rx="16" fill="#FFFFFF" stroke="#F0E7D6" stroke-width="1.5"/>
+  <circle cx="119" cy="562" r="24" fill="#FFC72C"/>
+  <text x="119" y="569" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#5A3E00">藏</text>
+  <text x="119" y="612" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="15" font-weight="700" fill="#27251F">节气收藏家</text>
+  <text x="119" y="632" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" fill="#9A9484">金牌成就</text>
+  <rect x="226" y="524" width="186" height="118" rx="16" fill="#FFFFFF" stroke="#F0E7D6" stroke-width="1.5"/>
+  <circle cx="319" cy="562" r="24" fill="#FFC72C"/>
+  <text x="319" y="569" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#5A3E00">免</text>
+  <text x="319" y="612" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="15" font-weight="700" fill="#27251F">免单猎人</text>
+  <text x="319" y="632" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" fill="#9A9484">金牌成就</text>
+  <rect x="426" y="524" width="186" height="118" rx="16" fill="#FFFFFF" stroke="#F0E7D6" stroke-width="1.5"/>
+  <circle cx="519" cy="562" r="24" fill="#FFC72C"/>
+  <text x="519" y="569" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#5A3E00">配</text>
+  <text x="519" y="612" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="15" font-weight="700" fill="#27251F">随心配大师</text>
+  <text x="519" y="632" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" fill="#9A9484">金牌成就</text>
+  <rect x="626" y="524" width="186" height="118" rx="16" fill="#FFFFFF" stroke="#F0E7D6" stroke-width="1.5"/>
+  <circle cx="719" cy="562" r="24" fill="#FFC72C"/>
+  <text x="719" y="569" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="20" font-weight="700" fill="#5A3E00">分</text>
+  <text x="719" y="612" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="15" font-weight="700" fill="#27251F">积分大亨</text>
+  <text x="719" y="632" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12" fill="#9A9484">金牌成就</text>
+<text x="420" y="676" text-anchor="middle" font-family="-apple-system,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif" font-size="12.5" fill="#9A9484">已解锁 14 / 17 枚徽章 · 数据来自麦当劳官方 MCP · 非官方产品</text>
+</svg>

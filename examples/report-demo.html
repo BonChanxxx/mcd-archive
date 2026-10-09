@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>麦麦档案 · 麦友</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #FBF5EA; font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; color: #27251F; line-height: 1.65; padding: 22px 12px 48px; }
+.report { max-width: 780px; margin: 0 auto; }
+
+.stripes { height: 10px; border-radius: 6px; background: repeating-linear-gradient(90deg, #DA291C 0 28px, #FFC72C 28px 56px); margin-bottom: 18px; }
+
+.cover { background: #DA291C; border-radius: 26px; padding: 46px 44px 42px; color: #fff; }
+.cover-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+.cover-tag { font-size: 12px; letter-spacing: 4px; color: #FFC72C; font-weight: 700; margin-bottom: 16px; }
+.cover h1 { font-size: 56px; letter-spacing: 8px; color: #FFC72C; font-weight: 800; line-height: 1.1; margin-bottom: 12px; }
+.cover-sub { font-size: 16px; opacity: .95; }
+.cover-line { margin-top: 30px; font-size: 17px; font-weight: 600; background: #27251F; color: #FFC72C; padding: 14px 18px; border-radius: 14px; max-width: 560px; }
+.cover-line b { color: #fff; }
+.cover-date { font-size: 12px; opacity: .72; margin-top: 20px; }
+
+section { margin-top: 28px; }
+h2 { font-size: 20px; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+h2::before { content: ""; width: 12px; height: 12px; background: #DA291C; border-radius: 4px; }
+h2 .hint { font-size: 12px; color: #8A8578; font-weight: 400; }
+
+.highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.hl { background: #fff; border: 2px solid #F2E3C0; border-radius: 20px; padding: 20px 20px 16px; text-align: center; }
+.hl b { display: block; font-size: 40px; color: #DA291C; font-weight: 800; line-height: 1.15; }
+.hl span { font-size: 13px; color: #6E6A60; }
+.hl-note { margin-top: 10px; font-size: 12.5px; color: #8A8578; text-align: center; }
+
+.card { background: #fff; border-radius: 18px; padding: 22px 24px; border: 1.5px solid #F0E7D6; }
+.tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; }
+.tag { background: #FFF3D6; border: 2px solid #FFC72C; color: #7A5B00; font-weight: 700; font-size: 14.5px; padding: 7px 18px; border-radius: 999px; }
+.persona-copy { font-size: 14.5px; color: #4A463D; }
+
+.g-ach { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.ach { background: #fff; border-radius: 18px; padding: 18px 20px; display: flex; gap: 16px; align-items: center; border: 1.5px solid #F0E7D6; }
+.ach .medal { width: 52px; height: 52px; min-width: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.gold .medal { background: #FFC72C; }
+.silver .medal { background: #E8E4DA; }
+.bronze .medal { background: #F0D5B8; }
+.ach b { font-size: 15.5px; display: block; margin-bottom: 3px; }
+.ach p { font-size: 12.5px; color: #6E6A60; }
+.ach .lv { font-size: 11px; color: #B08A2E; font-weight: 700; letter-spacing: 2px; }
+.silver .lv { color: #9A9484; }
+.bronze .lv { color: #B47B4C; }
+.locked-line { font-size: 12.5px; color: #9A9484; margin-top: 12px; padding-left: 4px; }
+
+.tickets-wrap { background: #fff; border-radius: 20px; padding: 22px 24px; border: 1.5px solid #F0E7D6; }
+.tickets-meta { font-size: 13px; color: #6E6A60; margin-bottom: 16px; }
+.tickets-meta b { color: #DA291C; font-size: 15px; }
+.tickets { display: flex; flex-wrap: wrap; gap: 9px; }
+.ticket { display: inline-flex; align-items: center; gap: 8px; background: #FFFBF1; border: 1.5px dashed #E8C97A; border-radius: 12px; padding: 7px 14px; font-size: 13.5px; font-weight: 600; color: #5A4A20; }
+.ticket i { width: 9px; height: 9px; background: #FFC72C; border-radius: 50%; }
+.ticket small { color: #A89C7C; font-size: 11px; font-weight: 400; }
+
+.assets { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.asset-card { background: #fff; border-radius: 18px; padding: 20px 22px; border: 1.5px solid #F0E7D6; }
+.asset-card h3 { font-size: 13.5px; color: #6E6A60; font-weight: 700; margin-bottom: 10px; letter-spacing: 1px; }
+.asset-big { font-size: 32px; font-weight: 800; color: #27251F; }
+.asset-big small { font-size: 13.5px; color: #6E6A60; font-weight: 400; }
+.asset-sub { font-size: 12.5px; color: #6E6A60; margin-top: 6px; }
+.asset-sub .warn { color: #DA291C; font-weight: 700; }
+.milestone { grid-column: 1 / -1; }
+.bar { height: 16px; background: #F3ECDD; border-radius: 999px; overflow: hidden; margin: 12px 0 8px; }
+.bar i { display: block; height: 100%; border-radius: 999px; background: repeating-linear-gradient(90deg, #DA291C 0 14px, #E8473B 14px 28px); }
+.redeem { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.redeem span { background: #FFF3D6; border-radius: 10px; padding: 6px 12px; font-size: 13px; font-weight: 600; color: #7A5B00; }
+
+footer { margin-top: 34px; text-align: center; font-size: 12px; color: #9A9484; line-height: 2; }
+@media (max-width: 640px) {
+  .highlights { grid-template-columns: 1fr; }
+  .hl { padding: 16px 18px 12px; }
+  .hl b { font-size: 32px; }
+  .g-ach { grid-template-columns: 1fr; }
+  .assets { grid-template-columns: 1fr; }
+  .cover { padding: 34px 26px 30px; }
+  .cover h1 { font-size: 40px; letter-spacing: 5px; }
+  .arches { display: none; }
+}
+</style>
+</head>
+<body>
+<div class="report">
+  <div class="stripes"></div>
+  <header class="cover">
+    <div class="cover-top">
+      <div>
+        <div class="cover-tag">McD ARCHIVE · 麦当劳个人档案</div>
+        <h1>麦麦档案</h1>
+        <p class="cover-sub">麦友 的麦当劳数据报告</p>
+      </div>
+      <svg class="arches" viewBox="0 0 136 110" width="104" aria-hidden="true">
+<path d="M12 104 Q12 16 40 16 Q68 16 68 104 M68 104 Q68 16 96 16 Q124 16 124 104"
+ fill="none" stroke="#FFC72C" stroke-width="16" stroke-linecap="round"/></svg>
+    </div>
+    <p class="cover-line">9 个多月 · <b>20 张门票一期不落</b> · 10 顿饭拿下 <b>14 枚徽章</b></p>
+    <p class="cover-date">档案生成于 2026-10-09 19:08 · 数据来自麦当劳官方 MCP</p>
+  </header>
+
+  <section>
+    <div class="highlights"><div class="hl"><b>20</b><span>张门票 · 一期不落</span></div><div class="hl"><b>14</b><span>枚徽章 · 隐藏成就</span></div><div class="hl"><b>16,267.3</b><span>积分 · 历史累计</span></div></div>
+    <p class="hl-note">还有：10 笔订单 · 2 家门店 · 3 次免单 · ¥148.1 有记录的消费</p>
+  </section>
+
+  <section>
+    <h2>麦麦人设</h2>
+    <div class="card">
+      <div class="tags"><span class="tag">晨间型选手</span><span class="tag">组合优化家</span><span class="tag">收藏控</span><span class="tag">羊毛大师</span></div>
+      <p class="persona-copy">数据说：你偏爱在上午出没，习惯用组合拳点单；收藏从不落下一期，钱包则被券管得服服帖帖。主门店是「你的常去门店」（9 单）。</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>隐藏成就 <span class="hint">已解锁 14 / 17 枚</span></h2>
+    <div class="g-ach"><div class="ach gold"><div class="medal">🗓️</div><div><span class="lv">金</span><b>节气收藏家</b><p>收集 20 张活动门票，一期不落</p></div></div><div class="ach gold"><div class="medal">🎯</div><div><span class="lv">金</span><b>免单猎人</b><p>3 笔订单实付 ¥0，券用出了艺术</p></div></div><div class="ach gold"><div class="medal">🍔</div><div><span class="lv">金</span><b>随心配大师</b><p>7 单锁定 1+1/随心配组合</p></div></div><div class="ach gold"><div class="medal">💎</div><div><span class="lv">金</span><b>积分大亨</b><p>累计获得 16267 积分</p></div></div><div class="ach gold"><div class="medal">🤝</div><div><span class="lv">金</span><b>麦麦老友</b><p>门票收藏线横跨 9 个月</p></div></div><div class="ach silver"><div class="medal">🌅</div><div><span class="lv">银</span><b>早餐征服者</b><p>3 顿在上午 10 点前解决</p></div></div><div class="ach silver"><div class="medal">☀️</div><div><span class="lv">银</span><b>午间玩家</b><p>6 顿踩准午餐时段</p></div></div><div class="ach silver"><div class="medal">📍</div><div><span class="lv">银</span><b>跨界打卡</b><p>在 2 家麦当劳留下足迹</p></div></div><div class="ach silver"><div class="medal">🎫</div><div><span class="lv">银</span><b>券包富人</b><p>手握 14 张待用券</p></div></div><div class="ach silver"><div class="medal">⏳</div><div><span class="lv">银</span><b>长情陪伴</b><p>有记录的日子横跨 42 天</p></div></div><div class="ach silver"><div class="medal">🎰</div><div><span class="lv">银</span><b>抽奖大户</b><p>积分够抽 71 次奖</p></div></div><div class="ach bronze"><div class="medal">✨</div><div><span class="lv">铜</span><b>初遇时刻</b><p>档案从第 1 笔订单开始</p></div></div><div class="ach bronze"><div class="medal">🎧</div><div><span class="lv">铜</span><b>周边猎人</b><p>下单带走联名周边</p></div></div><div class="ach bronze"><div class="medal">💸</div><div><span class="lv">铜</span><b>一掷千金</b><p>单笔最高 ¥59.2</p></div></div></div>
+    <p class="locked-line">待解锁 3 枚：夜宵搭子 · 专一食客 · 菜单探索家</p>
+  </section>
+
+  <section>
+    <h2>数字收藏馆 <span class="hint">门票收藏线</span></h2>
+    <div class="tickets-wrap">
+      <p class="tickets-meta">共 <b>20</b> 张 · 2025-12-29 ~ 2026-10-08 · 一期不落</p><div class="tickets"><span class="ticket"><i></i>绿色餐厅体验官<small>2025-12-29</small></span><span class="ticket"><i></i>小寒<small>2026-01-07</small></span><span class="ticket"><i></i>大寒<small>2026-01-26</small></span><span class="ticket"><i></i>雨水<small>2026-03-01</small></span><span class="ticket"><i></i>惊蛰<small>2026-03-09</small></span><span class="ticket"><i></i>春分<small>2026-03-21</small></span><span class="ticket"><i></i>清明<small>2026-04-05</small></span><span class="ticket"><i></i>谷雨<small>2026-04-28</small></span><span class="ticket"><i></i>立夏<small>2026-05-05</small></span><span class="ticket"><i></i>小满<small>2026-05-21</small></span><span class="ticket"><i></i>芒种<small>2026-06-07</small></span><span class="ticket"><i></i>夏至<small>2026-06-22</small></span><span class="ticket"><i></i>小暑<small>2026-07-09</small></span><span class="ticket"><i></i>大暑<small>2026-07-24</small></span><span class="ticket"><i></i>酸黄瓜OK派<small>2026-08-18</small></span><span class="ticket"><i></i>立秋<small>2026-08-18</small></span><span class="ticket"><i></i>处暑<small>2026-08-25</small></span><span class="ticket"><i></i>白露<small>2026-09-07</small></span><span class="ticket"><i></i>秋分测试<small>2026-09-24</small></span><span class="ticket"><i></i>寒露测试<small>2026-10-08</small></span></div>
+    </div>
+  </section>
+
+  
+  <section>
+    <h2>资产体检 <span class="hint">积分 · 券 · 抽奖</span></h2>
+    <div class="assets">
+      <div class="asset-card">
+        <h3>积分资产</h3>
+        <div class="asset-big">1,721.2 <small>可用积分</small></div>
+        <div class="asset-sub">历史累计 16,267.3 · 已花 10,504</div>
+        <div class="asset-sub"><span class="warn">即将过期 68.1 分</span> · 记得尽快用掉</div>
+      </div>
+      <div class="asset-card">
+        <h3>麦麦积分抽奖</h3>
+        <div class="asset-big">71 <small>次可抽</small></div>
+        <div class="asset-sub">24 分/次 · 10 种奖品</div>
+      </div>
+      <div class="asset-card">
+        <h3>券包</h3>
+        <div class="asset-big">14 <small>张待用券</small></div>
+        <div class="asset-sub">到期前记得用掉</div>
+      </div>
+      
+      <div class="asset-card milestone">
+        <h3>下一个里程碑</h3>
+        <div class="asset-big">罗技键鼠套装 <small>需 6,666 分</small></div>
+        <div class="bar"><i style="width:25.8%"></i></div>
+        <div class="asset-sub">当前 1,721.2 分（25.8%）· 还差 <b>4,944.8</b> 分</div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>当前可兑换 <span class="hint">现有积分即可拿下</span></h2>
+    <div class="card"><div class="redeem"><span>21.9元巨无霸可乐组合 · 800 分</span><span>28.9元板烧四件套 · 800 分</span><span>28.8元巨无霸四件套 · 800 分</span></div></div>
+  </section>
+
+  <footer>
+    本档案由「麦麦档案」Skill 基于麦当劳 MCP 数据生成<br>
+    非麦当劳官方产品 · 数据仅存于本地 · 2026-10-09 19:08
+  </footer>
+</div>
+</body>
+</html>
