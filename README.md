@@ -4,21 +4,39 @@
 
 ### 一句话，把你和麦当劳之间的所有数据，变成一份可以截图分享的个人档案
 
-**「生成我的麦麦档案」** —— 订单、活动门票、积分、优惠券、隐藏成就，全部由麦当劳官方 MCP 真实数据驱动。
+**「生成我的麦麦档案」** —— 订单、活动门票、积分、优惠券、隐藏成就，全部由**麦当劳官方 MCP** 真实数据驱动。
 
-<img src="assets/card.png" width="660" alt="麦麦档案 · 分享卡示例">
+[![McDonald's Contest](https://img.shields.io/badge/McDonald's%20Contest-entry-DA291C?style=flat-square)](https://github.com/M-China-Official/mcd-developer-innovation-challenge/issues/95)
+[![MCP](https://img.shields.io/badge/powered%20by-McDonald's%20official%20MCP-185FA5?style=flat-square)](https://open.mcd.cn/mcp)
+[![Python](https://img.shields.io/badge/python-3.9%2B-3776AB?style=flat-square)]()
+[![Deps](https://img.shields.io/badge/deps-zero-2EA44F?style=flat-square)]()
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
 
-*1024 程序员节 · 麦当劳程序员创意开发大赛参赛作品 · 非麦当劳官方产品*
+<img src="assets/card.png" width="620" alt="麦麦档案分享卡示例">
+
+**⭐ 觉得有意思？点一个 Star，就是给参赛作品最直接的投票**（大赛按 GitHub Star 排名）
+
+*1024 程序员节 · 麦当劳程序员创意开发大赛参赛作品（已通过官方报名审核）· 非麦当劳官方产品*
 
 </div>
 
 ---
 
+## 眼见为实
+
+完整档案在手机里长这样——封面、数据总览、麦麦人设、成就勋章墙，一屏一屏看：
+
+<div align="center">
+<img src="assets/mobile-preview.png" width="280" alt="麦麦档案完整报告 · 手机预览">
+</div>
+
+想亲手把玩：[下载完整档案 Demo](examples/report-demo.html)（单文件 HTML，浏览器打开即看，无需任何依赖）
+
 ## 这是什么
 
-**麦麦档案** 是一个基于麦当劳官方 MCP 的个人数据报告 Skill。
+**麦麦档案（mcd-archive）** 是一个基于麦当劳官方 MCP 的个人数据报告 Skill，也是一套零依赖的 Python 工具链。
 
-说一句「生成我的麦麦档案」，它会读取你的麦当劳账户数据，生成一份**海报级、可截图分享**的 HTML 档案——包含数据总览、麦麦人设、隐藏成就勋章墙、门票收藏线、积分资产体检。
+对 AI 助手说一句「生成我的麦麦档案」，它会读取你的麦当劳账户数据（订单、积分、券、活动门票、抽奖记录），生成一份**海报级、可截图分享**的 HTML 档案：数据总览、麦麦人设、隐藏成就勋章墙、门票收藏线、积分资产体检。
 
 > 灵感：如果音乐 App 有年度报告，那你在麦当劳的这几个月，也值得一份档案。
 
@@ -86,7 +104,7 @@ A：所有数据仅在你本地处理；仓库中的示例数据已做脱敏处�
 
 ## 支持一下
 
-如果这份档案让你好奇自己的数据长什么样——欢迎点一个 ⭐ **Star**。这是麦当劳程序员创意开发大赛的参赛作品，每个 Star 都是最直接的投票。
+如果这份档案让你好奇自己的数据长什么样——欢迎点一个 ⭐ **Star**，或分享给同样爱吃麦当劳的朋友。这是麦当劳程序员创意开发大赛的参赛作品，每个 Star 都是最直接的投票。
 
 ## 声明
 
