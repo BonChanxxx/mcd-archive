@@ -78,6 +78,24 @@ python3 render.py --mode card               # 生成分享卡 report_card.html
 - Skill 定义见 [`SKILL.md`](SKILL.md)
 - 放入 WorkBuddy 技能目录即可用自然语言触发（如「生成我的麦麦档案」）
 
+## 作为 MCP Server 使用
+
+本仓库还提供 **mcd-profile** MCP Server（[`mcp-server/`](mcp-server/)）：把档案能力以标准 MCP 工具暴露给任何客户端（Claude Desktop / WorkBuddy / Cherry Studio 等）。
+
+| 工具 | 说明 |
+|---|---|
+| `get_profile_summary` | 档案摘要：订单 / 门店 / 积分 / 门票 / 券 / 奖品总览 |
+| `get_tickets` | 节气门票收藏线 |
+| `get_achievements` | 成就徽章（17 条规则，已解锁 + 待解锁） |
+| `get_points_status` | 积分资产体检 |
+
+```bash
+pip install -r mcp-server/requirements.txt
+MCD_TOKEN=<你的 Token> python3 mcp-server/server.py
+```
+
+配置示例与详细说明见 [`mcp-server/README.md`](mcp-server/README.md)。
+
 ## 调用的麦当劳 MCP 能力
 
 订单历史、积分账户、积分抽奖、奖品记录、优惠券、麦麦省、活动日历、积分商城商品、营养数据等，均为**只读接口**。
