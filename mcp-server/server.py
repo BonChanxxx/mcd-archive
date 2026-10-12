@@ -20,6 +20,7 @@
 """
 import os
 import sys
+import time
 from collections import Counter
 from datetime import datetime
 
@@ -128,15 +129,29 @@ def _fetch(tool, args=None):
         return None
 
 
+_cache = {'data': None, 'ts': 0.0}
+_CACHE_TTL = 60.0
+
+
 def _load_all():
-    """一次性拉取档案所需的全部原始数据（归一化后返回）"""
-    return {
+    """一次性拉取档案所需的全部原始数据（归一化后返回）。
+
+    带 60s 会话内缓存：多个工具连续调用时复用同一批数据，
+    避免对官方 MCP 的重复请求（4 个工具全问 = 5~6 次 RPC，而非 20+ 次）。
+    """
+    now = time.time()
+    if _cache['data'] is not None and now - _cache['ts'] < _CACHE_TTL:
+        return _cache['data']
+    data = {
         'orders': parse_orders(_fetch('order-list') or {}),
         'account': parse_account(_fetch('query-my-account') or {}),
         'coupons': parse_coupons(_fetch('query-my-coupons') or {}),
         'prizes': parse_prizes(_fetch('query-my-prizes', {'pageNum': '1', 'pageSize': '50'}) or {}),
         'lottery': parse_lottery(_fetch('query-lottery-info') or {}),
     }
+    _cache['data'] = data
+    _cache['ts'] = now
+    return data
 
 
 def _tickets_of(prizes):
