@@ -34,6 +34,10 @@ python3 render_card_svg.py --name <用户昵称>
 
 生成后把产出文件路径告知用户：`data/report.html`（完整档案）、`data/report_card.html` 或 `data/card.svg`（分享卡）。
 
+## 另一种形态：MCP Server
+
+如果用户只要查单项数据（不要完整报告），本仓库还提供 `mcp-server/` 目录的 MCP Server（`mcd-profile`），四个工具：`get_profile_summary`（档案摘要）/ `get_tickets`（门票收藏线）/ `get_achievements`（成就徽章）/ `get_points_status`（积分资产）。配置方法见 `mcp-server/README.md`。
+
 ## 规则
 
 - **只用只读接口**：不调用 create-order / draw-lottery / auto-bind-coupons 等任何写操作

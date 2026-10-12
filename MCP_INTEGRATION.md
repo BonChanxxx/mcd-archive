@@ -60,3 +60,7 @@ scripts/render_card_svg.py ──► card.svg（免截图版分享卡）
 - **Token 不入库**：Token 通过环境变量 `MCD_TOKEN` 或本地安全存储（macOS 钥匙串）读取；本仓库配置文件仅含环境变量占位符
 - **数据不出本地**：采集数据仅存于本地 `data/` 目录（已 gitignore），不上传任何第三方服务
 - **限流合规**：采集请求间隔 250ms，远低于官方 600 次/分钟限制
+
+## 六、附：本项目自身的 MCP Server 形态
+
+除上述「消费官方 MCP」的定位外，本项目还以 **MCP Server 生产者**身份发布：`mcp-server/` 目录提供 `mcd-profile` Server（档案摘要 / 门票收藏线 / 成就徽章 / 积分资产四个只读工具），底层仍调用本文所列的麦当劳官方 MCP 只读接口。配置方式见 `mcp-server/README.md`。

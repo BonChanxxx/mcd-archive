@@ -12,6 +12,7 @@
 4. **代码开发**：`mcd_client.py` / `collect.py` / `analyze.py` / `render.py` / `render_card_svg.py` 五个模块全部由 WorkBuddy 编写、调试、测试（含空数据降级 E2E 测试）
 5. **内容创作**：17 条成就系统文案、麦麦人设逻辑、报告视觉设计（两轮迭代）均由 WorkBuddy 生成
 6. **交付演练**：真实数据端到端跑通：采集 10 项数据 → 生成完整档案与分享卡
+7. **形态扩展（10-12）**：新增 `mcp-server/` MCP Server 形态（FastMCP 4 工具），同样全程在 WorkBuddy 会话中完成开发、一致性测试（与 analyze.py 成就规则逐条断言）与协议级集成测试
 
 ## 开发环境特征
 
